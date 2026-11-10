@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página inicial de WDD 231 - Desenvolvimento Frontend para Web I - Ivan Luis Freitas de Carvalho">
+    <meta name="author" content="Ivan Luis Freitas de Carvalho">
+    <title>WDD 231 - Desenvolvimento Frontend para Web I | Início</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="estilos/telas-pequenas.css">
+    <link rel="stylesheet" href="estilos/telas-grandes.css">
+
+    <!-- JavaScript com defer -->
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/courses.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <span class="logo-icon">💻</span>
+            <span class="logo-text">Ivan Luis Freitas de Carvalho</span>
+        </div>
+        <button id="menu-btn" aria-label="Abrir menu de navegação">☰</button>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="index.html" class="active">Página Inicial</a></li>
+                <li><a href="#">Projeto da Câmara</a></li>
+                <li><a href="#">Projeto Final</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>WDD 231 - Desenvolvimento Frontend para Web I</h1>
+
+        <div class="grid-container">
+            <section class="card">
+                <h2>Sobre Mim</h2>
+                <div class="about-content">
+                    <img src="imagens/perfil.jpg" alt="Foto de Perfil de Ivan" width="150" height="150" loading="lazy">
+                    <p>Olá! Sou estudante de Desenvolvimento de Software na BYU-Pathway Worldwide, buscando aprimorar minhas habilidades em tecnologias web dinâmicas, frontend e arquitetura de software.</p>
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>Certificado de Programadores</h2>
+                <div class="filter-buttons">
+                    <button id="all-btn">Todos os Cursos</button>
+                    <button id="wdd-btn">Cursos WDD</button>
+                    <button id="cse-btn">Cursos CSE</button>
+                </div>
+                <div id="courses-container" class="courses-grid">
+                    <!-- Gerado dinamicamente via JavaScript -->
+                </div>
+                <p id="total-credits" class="credits-info"></p>
+            </section>
+
+            <section class="card">
+                <h2>Localidade</h2>
+                <p>Aparecida de Goiânia, Goiás, Brasil</p>
+                <div class="map-placeholder">
+                    <!-- Exemplo de conteúdo da região -->
+                    <p>Região metropolitana de Goiânia, centro-oeste brasileiro.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/ivancarvalho" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.linkedin.com/in/ivan-luis-freitas-de-carvalho-46660b95/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+        <p>&copy;<span id="currentyear"></span> ❖ Ivan Luis Freitas de Carvalho ❖ Goiás, Brasil</p>
+        <p id="ultimaModificacao"></p>
+    </footer>
+</body>
+</html>
