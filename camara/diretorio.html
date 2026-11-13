@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Diretório de Empresas e Associações - Câmara de Comércio de Aparecida">
+    <meta name="author" content="Ivan Luis Freitas de Carvalho">
+    
+    <!-- Open Graph Meta Tags (Facebook) -->
+    <meta property="og:title" content="Diretório Comercial | Câmara de Comércio de Aparecida">
+    <meta property="og:description" content="Conheça as empresas locais associadas e impulsione o comércio regional.">
+    <meta property="og:image" content="https://ivancarvalho.github.io/wdd231/camara/imagens/empresa1.webp">
+    <meta property="og:url" content="https://ivancarvalho.github.io/wdd231/camara/diretorio.html">
+    <meta property="og:type" content="website">
+
+    <title>Câmara de Comércio | Diretório de Membros</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="imagens/favicon.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="estilos/camara-pequena.css">
+    <link rel="stylesheet" href="estilos/camara-grande.css">
+
+    <!-- JavaScript com defer -->
+    <script src="scripts/diretorio.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <span class="logo-icon">🏛️</span>
+            <h1>Câmara de Comércio de Aparecida</h1>
+        </div>
+        <button id="menu-btn" aria-label="Abrir menu de navegação">☰</button>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="diretorio.html" class="active">Diretório</a></li>
+                <li><a href="associarse.html">Associe-se</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Diretório de Empresas Associadas</h2>
+        
+        <div class="view-controls">
+            <button id="grid-btn" class="active-view">Grade</button>
+            <button id="list-btn">Lista</button>
+        </div>
+
+        <section id="members-container" class="grid-view">
+            <!-- Os cartões ou linhas de membros serão inseridos aqui dinamicamente via JS -->
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/ivancarvalho" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.linkedin.com/in/ivan-luis-freitas-de-carvalho-46660b95/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+        <p>&copy;<span id="currentyear"></span> ❖ Câmara de Comércio ❖ Ivan Luis Freitas de Carvalho</p>
+        <p id="ultimaModificacao"></p>
+    </footer>
+</body>
+</html>

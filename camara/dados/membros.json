@@ -1,0 +1,65 @@
+[
+  {
+    "nome": "Serra Verde Ecoturismo",
+    "endereco": "Av. Principal, 100 - Centro",
+    "telefone": "(62) 3333-1111",
+    "url": "https://www.serraverde.exemplo",
+    "imagem": "imagens/empresa1.webp",
+    "nivelAssociacao": 3,
+    "descricao": "Agência líder em passeios ecológicos e trilhas guiadas na região."
+  },
+  {
+    "nome": "Café Colonial da Serra",
+    "endereco": "Rua das Flores, 45 - Bairro Alto",
+    "telefone": "(62) 3333-2222",
+    "url": "https://www.cafecolonial.exemplo",
+    "imagem": "imagens/empresa2.webp",
+    "nivelAssociacao": 2,
+    "descricao": "Gastronomia tradicional com produtos orgânicos locais."
+  },
+  {
+    "nome": "Pousada Vale das Águas",
+    "endereco": "Estrada das Cachoeiras, km 4",
+    "telefone": "(62) 3333-3333",
+    "url": "https://www.valedasaguas.exemplo",
+    "imagem": "imagens/empresa3.webp",
+    "nivelAssociacao": 3,
+    "descricao": "Hospedagem aconchegante em meio à natureza com total conforto."
+  },
+  {
+    "nome": "Oficina Mecânica 4x4",
+    "endereco": "Av. Industrial, 500",
+    "telefone": "(62) 3333-4444",
+    "url": "https://www.oficina4x4.exemplo",
+    "imagem": "imagens/empresa4.webp",
+    "nivelAssociacao": 1,
+    "descricao": "Manutenção especializada em veículos off-road e de aventura."
+  },
+  {
+    "nome": "Mercado Central dos Produtores",
+    "endereco": "Praça do Comércio, 12",
+    "telefone": "(62) 3333-5555",
+    "url": "https://www.mercadocentral.exemplo",
+    "imagem": "imagens/empresa5.webp",
+    "nivelAssociacao": 2,
+    "descricao": "Feira permanente com produtos agrícolas e artesanato regional."
+  },
+  {
+    "nome": "Livraria e Papelaria Saber",
+    "endereco": "Rua do Saber, 88 - Centro",
+    "telefone": "(62) 3333-6666",
+    "url": "https://www.livrariasaber.exemplo",
+    "imagem": "imagens/empresa6.webp",
+    "nivelAssociacao": 1,
+    "descricao": "Livros, mapas de trilhas, guias turísticos e material de escritório."
+  },
+  {
+    "nome": "Artigos de Aventura & Cia",
+    "endereco": "Av. Brasil, 1500",
+    "telefone": "(62) 3333-7777",
+    "url": "https://www.aventuracia.exemplo",
+    "imagem": "imagens/empresa7.webp",
+    "nivelAssociacao": 3,
+    "descricao": "Equipamentos de camping, vestuário técnico e calçados para trilha."
+  }
+]
