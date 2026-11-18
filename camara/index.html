@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página Inicial da Câmara de Comércio de Aparecida - Conectando empresas, eventos locais e desenvolvimento econômico.">
+    <meta name="author" content="Ivan Luis Freitas de Carvalho">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Câmara de Comércio de Aparecida | Início">
+    <meta property="og:description" content="Fortalecendo o comércio local, promovendo networking e impulsionando negócios na região.">
+    <meta property="og:image" content="https://ivancarvalho.github.io/wdd231/camara/imagens/hero.webp">
+    <meta property="og:url" content="https://ivancarvalho.github.io/wdd231/camara/index.html">
+    <meta property="og:type" content="website">
+
+    <title>Câmara de Comércio de Aparecida | Página Inicial</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="imagens/favicon.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Compartilhado -->
+    <link rel="stylesheet" href="estilos/camara-pequena.css">
+    <link rel="stylesheet" href="estilos/camara-grande.css">
+
+    <!-- JavaScript com defer -->
+    <script src="scripts/inicio.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <span class="logo-icon" aria-hidden="true">🏛️</span>
+            <div class="site-title">
+                <span class="brand-name">Aparecida</span>
+                <span class="brand-sub">Câmara de Comércio</span>
+            </div>
+        </div>
+        <button id="menu-btn" aria-label="Abrir menu de navegação">☰</button>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="index.html" class="active">Início</a></li>
+                <li><a href="diretorio.html">Diretório</a></li>
+                <li><a href="associarse.html">Associe-se</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Seção Hero com tag <img> e CTA sobreposto -->
+        <section class="hero-section">
+            <img src="imagens/hero.webp" alt="Vista aérea de uma cidade com prédios comerciais ao entardecer" width="900" height="554">
+            <a href="associarse.html" class="cta-button">Associe-se à Câmara</a>
+        </section>
+
+        <h1>Início</h1>
+
+        <!-- Grade de 3 colunas: Eventos, Clima Atual e Previsão -->
+        <div class="home-info-grid">
+            <section class="info-card">
+                <h2>Eventos Recentes</h2>
+                <div class="card-body">
+                    <article class="event-item">
+                        <h3>Café Empresarial & Networking</h3>
+                        <p><strong>Data:</strong> 25 de Novembro, às 08h30</p>
+                        <p>Encontro mensal para troca de experiências e parcerias entre lojistas e prestadores de serviço.</p>
+                    </article>
+                    <article class="event-item">
+                        <h3>Workshop: Marketing Digital Local</h3>
+                        <p><strong>Data:</strong> 03 de Dezembro, às 19h00</p>
+                        <p>Estratégias práticas para atrair clientes da região usando buscas locais e redes sociais.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="info-card">
+                <h2>Clima Atual</h2>
+                <div id="current-weather" class="card-body weather-current">
+                    <p>Carregando dados meteorológicos...</p>
+                </div>
+            </section>
+
+            <section class="info-card">
+                <h2>Previsão de Clima</h2>
+                <div id="forecast-weather" class="card-body weather-forecast">
+                    <p>Carregando previsão de 3 dias...</p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Seção de Empresas em Destaque (Ouro/Prata aleatórias) -->
+        <section class="spotlights-section">
+            <h2 class="visually-hidden">Empresas em Destaque</h2>
+            <div id="spotlights-container" class="spotlights-grid">
+                <!-- Preenchido dinamicamente via JS -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-contact">
+                <p><strong>Câmara de Comércio de Aparecida</strong></p>
+                <p>Av. Independência, 1200 - Centro</p>
+                <p>Aparecida de Goiânia, GO</p>
+                <p>contato@camaraaparecida.org.br</p>
+                <p>(62) 3333-0000</p>
+            </div>
+
+            <div class="social-links">
+                <a href="https://github.com/ivancarvalho" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/ivan-luis-freitas-de-carvalho-46660b95/" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+
+            <div class="footer-meta">
+                <p>Projeto de Aula WDD 231</p>
+                <p>Ivan Luis Freitas de Carvalho</p>
+                <p>&copy;<span id="currentyear"></span> Câmara de Comércio de Aparecida</p>
+                <p id="ultimaModificacao"></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

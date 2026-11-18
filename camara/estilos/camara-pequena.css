@@ -5,6 +5,7 @@
     --bg-color: #f8f9fa;
     --text-color: #212529;
     --card-bg: #ffffff;
+    --border-color: #dee2e6;
     --font-family: 'Roboto', sans-serif;
 }
 
@@ -24,6 +25,7 @@ body {
     min-height: 100vh;
 }
 
+/* Cabeçalho e Navegação */
 header {
     background-color: var(--primary-color);
     color: #fff;
@@ -37,12 +39,26 @@ header {
 .logo-container {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    font-size: 1rem;
+    gap: 0.6rem;
 }
 
-.logo-container h1 {
-    font-size: 1.2rem;
+.logo-icon {
+    font-size: 1.8rem;
+}
+
+.site-title {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.brand-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.brand-sub {
+    font-size: 0.85rem;
 }
 
 #menu-btn {
@@ -76,27 +92,205 @@ nav a {
     color: #fff;
     text-decoration: none;
     padding: 1rem;
-    border-top: 1px solid rgba(255,255,255,0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-nav a:hover, nav a.active {
+nav a:hover,
+nav a.active {
     background-color: var(--accent-color);
 }
 
+/* Conteúdo Principal */
 main {
     flex: 1;
-    padding: 1.5rem 1rem;
+    padding: 1rem;
     max-width: 1200px;
     margin: 0 auto;
     width: 100%;
 }
 
-h2 {
-    text-align: center;
-    margin-bottom: 1.5rem;
+h1 {
+    margin: 1.2rem 0;
+    color: var(--primary-color);
+    font-size: 1.8rem;
+}
+
+/* Hero Section + CTA */
+.hero-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.hero-section img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 420px;
+    object-fit: cover;
+}
+
+.cta-button {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: var(--accent-color);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 0.75rem 1.25rem;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.cta-button:hover {
+    background-color: var(--primary-color);
+}
+
+/* Grade de Informações (Eventos, Clima, Previsão) */
+.home-info-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.info-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.info-card h2 {
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 1.15rem;
+    padding: 0.75rem 1rem;
+    margin: 0;
+    text-align: left;
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+.event-item {
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.event-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.event-item h3 {
+    font-size: 1rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.25rem;
+}
+
+/* Clima */
+.weather-main {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.weather-temp {
+    font-size: 2rem;
+    font-weight: 700;
     color: var(--primary-color);
 }
 
+.weather-desc {
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+.forecast-day {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 1.05rem;
+}
+
+.forecast-day:last-child {
+    border-bottom: none;
+}
+
+/* Destaques de Empresas */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}
+
+.spotlights-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.spotlight-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.spotlight-header {
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.6rem;
+    margin-bottom: 0.8rem;
+}
+
+.spotlight-header h3 {
+    color: var(--primary-color);
+    font-size: 1.15rem;
+}
+
+.spotlight-tagline {
+    font-size: 0.85rem;
+    color: #495057;
+}
+
+.spotlight-body {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.spotlight-body img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+.spotlight-details p,
+.spotlight-details a {
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+    word-break: break-word;
+}
+
+.spotlight-details a {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+/* Estilos da Página Diretório (mantidos para consistência) */
 .view-controls {
     text-align: center;
     margin-bottom: 1.5rem;
@@ -108,7 +302,7 @@ h2 {
     background-color: var(--secondary-color);
     color: #fff;
     cursor: pointer;
-    font-weight: bold;
+    font-weight: 700;
     border-radius: 4px;
     margin: 0 0.2rem;
 }
@@ -117,7 +311,6 @@ h2 {
     background-color: var(--accent-color);
 }
 
-/* Estilo Grid (Padrão) */
 .grid-view {
     display: grid;
     grid-template-columns: 1fr;
@@ -126,11 +319,11 @@ h2 {
 
 .grid-view .member-card {
     background-color: var(--card-bg);
-    border: 1px solid #dee2e6;
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 1rem;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .grid-view .member-card img {
@@ -141,7 +334,6 @@ h2 {
     margin-bottom: 0.8rem;
 }
 
-/* Estilo Lista (Sem imagens conforme requisitos) */
 .list-view {
     display: flex;
     flex-direction: column;
@@ -150,7 +342,7 @@ h2 {
 
 .list-view .member-card {
     background-color: var(--card-bg);
-    border: 1px solid #dee2e6;
+    border: 1px solid var(--border-color);
     padding: 1rem;
     border-radius: 6px;
     display: flex;
@@ -159,30 +351,44 @@ h2 {
 }
 
 .list-view .member-card img {
-    display: none; /* Oculta a imagem no modo lista */
+    display: none;
 }
 
+/* Rodapé */
 footer {
     background-color: var(--primary-color);
     color: #fff;
-    text-align: center;
     padding: 1.5rem 1rem;
     margin-top: auto;
     font-size: 0.9rem;
 }
 
+.footer-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    text-align: center;
+}
+
 .social-links {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 1rem;
-    margin-bottom: 0.8rem;
 }
 
 .social-links a {
     color: #fff;
     text-decoration: none;
+    font-weight: 700;
+    padding: 0.4rem 0.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 4px;
 }
 
 .social-links a:hover {
-    color: var(--accent-color);
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
 }
