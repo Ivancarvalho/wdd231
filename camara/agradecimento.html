@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Confirmação de solicitação de associação - Câmara de Comércio de Aparecida.">
+    <meta name="author" content="Ivan Luis Freitas de Carvalho">
+
+    <title>Câmara de Comércio de Aparecida | Agradecimento</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="imagens/favicon.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Compartilhado -->
+    <link rel="stylesheet" href="estilos/camara-pequena.css">
+    <link rel="stylesheet" href="estilos/camara-grande.css">
+
+    <!-- JavaScript com defer -->
+    <script src="scripts/agradecimento.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <span class="logo-icon" aria-hidden="true">🏛️</span>
+            <div class="site-title">
+                <span class="brand-name">Aparecida</span>
+                <span class="brand-sub">Câmara de Comércio</span>
+            </div>
+        </div>
+        <button id="menu-btn" aria-label="Abrir menu de navegação">☰</button>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="diretorio.html">Diretório</a></li>
+                <li><a href="associacao.html" class="active">Associe-se</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Solicitação Recebida com Sucesso!</h1>
+
+        <section class="thankyou-card">
+            <h2>Obrigado por se associar à Câmara de Comércio de Aparecida</h2>
+            <p>Recebemos seus dados e nossa equipe entrará em contato em breve para finalizar a ativação da sua empresa.</p>
+
+            <div id="submission-details" class="submission-summary">
+                <!-- Preenchido dinamicamente via JavaScript -->
+            </div>
+
+            <a href="index.html" class="back-home-btn">Voltar para a Página Inicial</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-contact">
+                <p><strong>Câmara de Comércio de Aparecida</strong></p>
+                <p>Av. Independência, 1200 - Centro</p>
+                <p>Aparecida de Goiânia, GO</p>
+                <p>contato@camaraaparecida.org.br</p>
+                <p>(62) 3333-0000</p>
+            </div>
+
+            <div class="social-links">
+                <a href="https://github.com/ivancarvalho" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/ivan-luis-freitas-de-carvalho-46660b95/" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+
+            <div class="footer-meta">
+                <p>Projeto de Aula WDD 231</p>
+                <p>Ivan Luis Freitas de Carvalho</p>
+                <p>&copy;<span id="currentyear"></span> Câmara de Comércio de Aparecida</p>
+                <p id="ultimaModificacao"></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

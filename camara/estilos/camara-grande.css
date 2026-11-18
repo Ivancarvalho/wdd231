@@ -50,4 +50,10 @@
     .footer-meta {
         text-align: right;
     }
+
+    /* Layout de 2 colunas da página Associe-se (Formulário à esquerda, 4 cartões à direita) */
+    .join-layout {
+        grid-template-columns: 1.4fr 1fr;
+        align-items: start;
+    }
 }

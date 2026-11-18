@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Associe-se à Câmara de Comércio de Aparecida - Conheça nossos planos de associação e envie sua proposta.">
+    <meta name="author" content="Ivan Luis Freitas de Carvalho">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Associe-se | Câmara de Comércio de Aparecida">
+    <meta property="og:description" content="Fortaleça sua empresa com networking, eventos e visibilidade na Câmara de Comércio de Aparecida.">
+    <meta property="og:image" content="https://ivancarvalho.github.io/wdd231/camara/imagens/hero.webp">
+    <meta property="og:url" content="https://ivancarvalho.github.io/wdd231/camara/associacao.html">
+    <meta property="og:type" content="website">
+
+    <title>Câmara de Comércio de Aparecida | Associe-se</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="imagens/favicon.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Compartilhado -->
+    <link rel="stylesheet" href="estilos/camara-pequena.css">
+    <link rel="stylesheet" href="estilos/camara-grande.css">
+
+    <!-- JavaScript com defer -->
+    <script src="scripts/associacao.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <span class="logo-icon" aria-hidden="true">🏛️</span>
+            <div class="site-title">
+                <span class="brand-name">Aparecida</span>
+                <span class="brand-sub">Câmara de Comércio</span>
+            </div>
+        </div>
+        <button id="menu-btn" aria-label="Abrir menu de navegação">☰</button>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="diretorio.html">Diretório</a></li>
+                <li><a href="associacao.html" class="active">Associe-se</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Solicitação de Associação</h1>
+
+        <div class="join-layout">
+            <!-- Coluna 1: Formulário de Pedido de Associação -->
+            <section class="form-section">
+                <h2>Dados do Candidato e da Organização</h2>
+                <form method="get" action="agradecimento.html" class="join-form">
+                    <label>
+                        Nome *
+                        <input type="text" name="nome" title="Informe seu primeiro nome" autocomplete="given-name" required>
+                    </label>
+
+                    <label>
+                        Sobrenome *
+                        <input type="text" name="sobrenome" title="Informe seu sobrenome" autocomplete="family-name" required>
+                    </label>
+
+                    <label>
+                        Cargo na Organização
+                        <input type="text" name="cargo" title="Informe seu cargo (mínimo 7 letras, espaços ou hifens)" autocomplete="organization-title" pattern="[A-Za-zÀ-ÿ\s\-]{7,}">
+                    </label>
+
+                    <label>
+                        Endereço de E-mail *
+                        <input type="email" name="email" title="Informe um endereço de e-mail válido" autocomplete="email" placeholder="contato@suaempresa.com.br" required>
+                    </label>
+
+                    <label>
+                        Número de Celular *
+                        <input type="tel" name="telefone" title="Informe seu número de telefone celular com DDD" autocomplete="tel" required>
+                    </label>
+
+                    <label>
+                        Nome da Empresa / Organização *
+                        <input type="text" name="organizacao" title="Informe o nome da sua empresa ou organização" autocomplete="organization" required>
+                    </label>
+
+                    <label>
+                        Nível de Associação *
+                        <select name="nivel" title="Selecione o nível de associação desejado" required>
+                            <option value="" disabled selected>Selecione um nível...</option>
+                            <option value="np">Associação NP (Sem Fins Lucrativos - Isento)</option>
+                            <option value="bronze">Associação Bronze</option>
+                            <option value="silver">Associação Prata</option>
+                            <option value="gold">Associação Ouro</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Descrição da Atividade / Organização
+                        <textarea name="descricao" title="Descreva brevemente os produtos ou serviços da sua organização" rows="4"></textarea>
+                    </label>
+
+                    <input type="hidden" name="timestamp" id="timestamp">
+
+                    <button type="submit" class="submit-btn">Solicitar Associação</button>
+                </form>
+            </section>
+
+            <!-- Coluna 2: 4 Cartões de Níveis de Associação -->
+            <section class="membership-section">
+                <h2>Níveis de Associação</h2>
+                <div class="membership-cards">
+                    <article class="membership-card card-1">
+                        <h3>Associação NP</h3>
+                        <p>Organizações sem fins lucrativos</p>
+                        <button type="button" class="modal-open-btn" data-modal="modal-np">Ver Benefícios</button>
+                    </article>
+
+                    <article class="membership-card card-2">
+                        <h3>Associação Bronze</h3>
+                        <p>Ideal para micro e pequenas empresas</p>
+                        <button type="button" class="modal-open-btn" data-modal="modal-bronze">Ver Benefícios</button>
+                    </article>
+
+                    <article class="membership-card card-3">
+                        <h3>Associação Prata</h3>
+                        <p>Crescimento, capacitação e networking</p>
+                        <button type="button" class="modal-open-btn" data-modal="modal-silver">Ver Benefícios</button>
+                    </article>
+
+                    <article class="membership-card card-4">
+                        <h3>Associação Ouro</h3>
+                        <p>Máxima visibilidade e destaque comercial</p>
+                        <button type="button" class="modal-open-btn" data-modal="modal-gold">Ver Benefícios</button>
+                    </article>
+                </div>
+            </section>
+        </div>
+
+        <!-- 4 Modais HTML (<dialog>) -->
+        <dialog id="modal-np" class="membership-modal">
+            <div class="modal-content">
+                <h3>Associação NP (Sem Fins Lucrativos)</h3>
+                <p><strong>Investimento:</strong> Gratuito (Isento de taxa)</p>
+                <ul>
+                    <li>Listagem básica no Diretório Comercial da Câmara</li>
+                    <li>Acesso a reuniões comunitárias mensais</li>
+                    <li>Divulgação de campanhas sociais no boletim informativo</li>
+                </ul>
+                <button type="button" class="modal-close-btn">Fechar</button>
+            </div>
+        </dialog>
+
+        <dialog id="modal-bronze" class="membership-modal">
+            <div class="modal-content">
+                <h3>Associação Bronze</h3>
+                <p><strong>Investimento:</strong> R$ 90,00 / mês</p>
+                <ul>
+                    <li>Listagem completa no Diretório Comercial com logotipo e link</li>
+                    <li>Desconto de 15% em workshops e treinamentos</li>
+                    <li>Convite para os cafés empresariais de networking</li>
+                </ul>
+                <button type="button" class="modal-close-btn">Fechar</button>
+            </div>
+        </dialog>
+
+        <dialog id="modal-silver" class="membership-modal">
+            <div class="modal-content">
+                <h3>Associação Prata</h3>
+                <p><strong>Investimento:</strong> R$ 180,00 / mês</p>
+                <ul>
+                    <li>Todos os benefícios do nível Bronze</li>
+                    <li>Elegível para rotação nos Destaques da Página Inicial</li>
+                    <li>Desconto de 30% em eventos e treinamentos</li>
+                    <li>Publicação trimestral nas redes sociais da Câmara</li>
+                </ul>
+                <button type="button" class="modal-close-btn">Fechar</button>
+            </div>
+        </dialog>
+
+        <dialog id="modal-gold" class="membership-modal">
+            <div class="modal-content">
+                <h3>Associação Ouro</h3>
+                <p><strong>Investimento:</strong> R$ 320,00 / mês</p>
+                <ul>
+                    <li>Todos os benefícios do nível Prata</li>
+                    <li>Prioridade máxima nos Destaques da Página Inicial</li>
+                    <li>Acesso gratuito a todos os almoços executivos e treinamentos</li>
+                    <li>Oportunidade de patrocínio master em feiras e eventos anuais</li>
+                </ul>
+                <button type="button" class="modal-close-btn">Fechar</button>
+            </div>
+        </dialog>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-contact">
+                <p><strong>Câmara de Comércio de Aparecida</strong></p>
+                <p>Av. Independência, 1200 - Centro</p>
+                <p>Aparecida de Goiânia, GO</p>
+                <p>contato@camaraaparecida.org.br</p>
+                <p>(62) 3333-0000</p>
+            </div>
+
+            <div class="social-links">
+                <a href="https://github.com/ivancarvalho" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/ivan-luis-freitas-de-carvalho-46660b95/" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+
+            <div class="footer-meta">
+                <p>Projeto de Aula WDD 231</p>
+                <p>Ivan Luis Freitas de Carvalho</p>
+                <p>&copy;<span id="currentyear"></span> Câmara de Comércio de Aparecida</p>
+                <p id="ultimaModificacao"></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
